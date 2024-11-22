@@ -4,3 +4,8 @@
 | Name | Description|
 |:----:|:----------:|
 | lang | python     |
+
+
+# dockerで環境構築
+Dockerfileを作成して、下記のコマンドを実行
+$ docker build -t python_dev_to_ml .
