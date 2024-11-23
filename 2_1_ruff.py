@@ -1,5 +1,7 @@
-import boto3
 import os
+
+import boto3
+
 
 def show_doc():
     #本書ようになんらかの形でライブラリを使用する

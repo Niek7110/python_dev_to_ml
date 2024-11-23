@@ -1,5 +1,3 @@
-import boto3
-import os
 
 
 def sum(a, b):  # 引数の間にスペースがない
