@@ -12,6 +12,7 @@ ipython = "^8.29.0"
 black = "^24.10.0"
 ruff = "^0.8.0"
 mypy = "^1.13.0"
+tox = "^4.23.2"
 
 
 [build-system]
@@ -25,3 +26,20 @@ lint.ignore =["E501"]
 lint.select = ["C9","E","F", "W","I"]
 line-length = 80
 src = ["."]
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    skipsdist = True
+    env_list = black,ruff,mypy
+    [black]
+    deps = black
+    commands = black .
+
+    [ruff]
+    deps = ruff
+    commands = ruff check .
+
+    [mypy]
+    deps = mypy
+    commands = mypy .
+"""
